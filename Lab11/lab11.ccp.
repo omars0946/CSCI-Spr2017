@@ -1,0 +1,5 @@
+The computer will randomly generate a number from 1 to 25
+The computer will prompt the user to pick a number
+If the user imnput is too low, it will display "highher 
+If they are too high, it will display "lower" 
+I
