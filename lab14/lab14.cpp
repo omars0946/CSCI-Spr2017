@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int change, quarters, dimes, nickels, pennies;
     int total, dollars, cents;
-    
+    tax = 10.9;
     
         cout << "Enter the total amount of money you wish to input";
         cin  >> change;
@@ -23,7 +23,7 @@ int main() {
     
     cout << "input your total amount (notice a tax of 10.9 percent)";
     cin >> total;  // inputting tax on initial amount
-    static_cast<double> total  = static_cast<double> total % 10.9;
+    total  =  total % tax;
     
     dollars = total / 100;  // how many dollarss are in the total amount
     total = total % 100; //calculating change
