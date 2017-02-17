@@ -36,8 +36,6 @@ cout << "They were so upset with " << Name << "That they threw a chair directly 
 cout << "The injuries were so bad, that the " << Body_part << "had to be amputated. While unconscious,  " << Name << "had a dream that they awoke from the hospital, and the place was overrun with " + Creature; 
 cout << "s! The first thing he/she saw was a" << Object << "and used it to defend themselves, unfortunately, " << Name << "missed and hit himself so hard he woke up" ;
 cout << "When he actually awoke, the" << Creature << "came and took them away, never to be seen again";
-
-
  return 0;    
  }
 }

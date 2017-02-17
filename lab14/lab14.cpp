@@ -33,5 +33,4 @@ int main() {
     cout << "Total number of cents left is " << cents << endl;
     
     
-    return 0;    
- }
+    
