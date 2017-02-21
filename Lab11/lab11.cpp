@@ -6,3 +6,5 @@ If they are too high, it will display "lower"
 for each incorrect guess, the computer will deduct 1 point from the initial total, which is 10
 Once guessed correctly, the computer will display the score (10 - total number of guesses)
 
+
+

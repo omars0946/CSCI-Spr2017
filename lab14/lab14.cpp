@@ -2,9 +2,9 @@
 using namespace std;
 
 int main() {
-    int change, quarters, dimes, nickels, pennies;
-    int total, dollars, cents;
-    tax = 10.9;
+    int change, quarters, dimes, nickels, pennies; //stating the variables that are in program
+    int total, dollars, cents; //stating the variables that are in program
+    int tax = 10.9; // stating tax
     
         cout << "Enter the total amount of money you wish to input";
         cin  >> change;
@@ -31,6 +31,8 @@ int main() {
     
     cout << "Total dollar count is " << dollars << endl;
     cout << "Total number of cents left is " << cents << endl;
-    
+     return 0;    
+ }
+ 
     
     

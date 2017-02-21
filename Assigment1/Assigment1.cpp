@@ -3,31 +3,32 @@
  
 using namespace std;
 
-
-    int name, wage, hours, gross_pay, net_pay;
-
-    struct Info{
-        int Name = name
-        int wage = 0;
-        int hours = 0;
-        int gross_pay = gross_pay;
-        int net_pay = net_pay;
+   struct employee{     //creating strucutre for inputs 
+        char Name;
+        float Wage; 
+        float Hours; 
+        float gross_pay;
+        float net_pay;
     };
     
-    int main(){
-       
-    cout << "What is your name?" << endl;
-        cin >> name;
-    cout << "How much do you earn an hour? " << endl;
-        cin >> wage;
-    cout << "what many hours did you work? " << endl;
-        cin >> hours;
+int main(){
 
-gross_pay = hours * wage;
+           char name;                                       //declaring chars and floats so they can be defined in int main()
+           float Wage, Hours, gross_pay, net_pay;
+    
+    cout << "What is your name?" << endl;                   //asking for user inputs
+        cin >> name;
+    cout << "How much do you earn an hour? " << endl;       //asking for user inputs
+        cin >> Wage;
+    cout << "what many hours did you work? " << endl;       //asking for user inputs
+        cin >> Hours;
+
+gross_pay = Hours * Wage;
 net_pay = (gross_pay - 130);
 net_pay = net_pay * .83;
   
     
     return 0 ;
     }
+    
         
