@@ -1,6 +1,0 @@
-The computer will randomly generate a number from 1 to 25
-The computer will prompt the user to pick a number
-If the user input is too low, it will display "higher 
-If they are too high, it will display "lower" 
-For each mistake, the computer will deduct 1 point from the final score
-Once guessed correctly, the computer will display the score
