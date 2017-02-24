@@ -1,25 +1,27 @@
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
+void PrintMath();
 
-
-void  PrintMath () {
-    int random = rand() % 100 + 1;
-
-    cout << "Displaying a random number " << random << endl;
-    PrintMath = srand();
+int main() 
+{ 
+ cout << "Displaying a random number " << endl;
     
-    return;
-}
-
-int main() {
     PrintMath ();
     
     cout << endl;
-     return 0 ;
-    }
-    
+    return 0 ;
+}
+
+void  PrintMath () {
+    srand(time(0)); 
+    int DisplayNumber = rand() % 100 + 1;
+
+cout << "Your random number is " << DisplayNumber;
+    return ;
+}
 
 
