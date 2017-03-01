@@ -20,19 +20,17 @@ void PrintMath() {
     ValueTwo = Value2;
     
     srand(time(0)); 
-    int DisplayNumber = rand() % Value1 + Value2;
+    int DisplayNumber = rand () % (Value1-Value2) + Value1;
+    
+    std::swap( Value1 , Value2 );
     
     cout << Value2 << DisplayNumber << Value1 << endl;
 return;
 }
 
 int main() {
-
- 
     
    PrintMath();
-   
-
    
    return 0;
 
