@@ -3,16 +3,16 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-   int product(int x ,int y);
+   int product(int x ,int y); // declaring for future use
 
 void Random() { //random number generator
     
     int Value1 = 0;
-    int Value2 = 0;
+    int Value2 = 0; // dedclaring 
     
     cout << "Pick two numbers" << endl;
     cin >> Value1;
-    cin >> Value2;
+    cin >> Value2; // getting input
     
      
     
@@ -53,16 +53,14 @@ void Kilo_to_Ibs(){
 
 return;
 }
-    
-
 
 int main() {
     int a;
     int b;
-    int c = product(a,b);
+    int c = product(a,b); // declaring values to use with beginning function
     
             
-   Random();
+   Random(); // calling fucntions
    Ibs_to_Kilo();
    Kilo_to_Ibs();
    
@@ -70,6 +68,6 @@ int main() {
 
 }
 
-int product(int x ,int y){
-    return(x,y);
+int product(int x ,int y){//displays values within parameters
+    return(x,y); //returns an output
 }

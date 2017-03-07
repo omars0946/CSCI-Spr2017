@@ -4,16 +4,16 @@
 #include <ctime>
 using namespace std;
 
-int product(int x ,int y);
+int product(int x ,int y); // declaring for future use
 
 void PrintMath() {
     
-    int Value1 = 0;
+    int Value1 = 0; // decleration
     int Value2 = 0;
     
     cout << "Pick two numbers" << endl;
     cin >> Value1;
-    cin >> Value2;
+    cin >> Value2; // get input
     
      
     
@@ -28,15 +28,15 @@ return;
 }
 
 int main() {
-    int a;
+    int a; // delcaring variables to be in place of the prouduct function
     int b;
-    int c = product(a,b);
+    int c = product(a,b); //sets c equal to function
     
-   PrintMath();
+   PrintMath(); // random number
    
    return 0;
 }
 
-int product(int x ,int y){
-    return(x,y);
+int product(int x ,int y){ //displays values within parameters 
+    return(x,y); //returns an output
 }
