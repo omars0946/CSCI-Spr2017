@@ -4,7 +4,7 @@
 #include <ctime>
 using namespace std;
 
-
+int product(int x ,int y);
 
 void PrintMath() {
     
@@ -15,21 +15,28 @@ void PrintMath() {
     cin >> Value1;
     cin >> Value2;
     
+     
     
+       int DisplayNumber = rand () % (Value1-Value2) + Value1; // generates a random number betweeen the values
     
-    srand(time(0)); 
-    int DisplayNumber = rand () % (Value1-Value2) + Value1;
+    std::swap( Value1 , Value2 ); // swaps values
     
-    std::swap( Value1 , Value2 );
-    
-    cout << Value2 << DisplayNumber << Value1 << endl;
+    cout << Value1 <<" " << DisplayNumber <<" " << Value2 << endl; // displays the output
+
 return;
+
 }
 
 int main() {
+    int a;
+    int b;
+    int c = product(a,b);
     
    PrintMath();
    
    return 0;
+}
 
+int product(int x ,int y){
+    return(x,y);
 }
