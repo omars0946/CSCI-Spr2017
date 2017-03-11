@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
+
    int product(int x ,int y); // declaring for future use
 
 void Random() { //random number generator

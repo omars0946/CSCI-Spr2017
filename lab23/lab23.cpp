@@ -8,8 +8,8 @@ int product(int x ,int y); // declaring for future use
 
 void PrintMath() {
     
-    int Value1 = 0; // decleration
-    int Value2 = 0;
+    int Value1 = 0; // declaration
+    int Value2 = 0
     
     cout << "Pick two numbers" << endl;
     cin >> Value1;
@@ -28,7 +28,7 @@ return;
 }
 
 int main() {
-    int a; // delcaring variables to be in place of the prouduct function
+    int a; // declaring variables to be in place of the prouduct function
     int b;
     int c = product(a,b); //sets c equal to function
     
