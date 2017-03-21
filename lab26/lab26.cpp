@@ -40,7 +40,7 @@ TemperatureConverter::TemperatureConverter()
         _farenheit = 0;
 }
 
-//initialize the member variables to specific values
+//set constructor
 TemperatureConverter::TemperatureConverter( int k){
 
         _kelvin = k;
@@ -50,19 +50,18 @@ TemperatureConverter::TemperatureConverter( int k){
 //setters
 void TemperatureConverter::SetTempFromKelvin(int k){
         _kelvin = k;
-    }
+    }                                                           //set value to kelvin
 
-//conversions equal to _feet
 void TemperatureConverter::SetTempFromCelsius(int c){
     int k = 0;
      k = c + 273.15;
-            _celsius = k; 
+            _celsius = k;                                       //given equations
     }
 
 
 void TemperatureConverter::SetTempFromFahrenheit(int f){
     int k = 0;
-     k = (5 * (f -32)/9) + 273.15;
+     k = (5 * (f -32)/9) + 273.15;                              //given equations
             _farenheit = k; 
     }
 

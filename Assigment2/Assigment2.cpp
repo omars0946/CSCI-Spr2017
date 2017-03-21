@@ -78,7 +78,7 @@ void Distance::setMiles(long double m, long double f){
 
 //getters 
 int Distance::getinch()  {
-    return feet_;
+    return feet_;                       //return private variable
 }
 
 int Distance::getFeet()  {
@@ -99,7 +99,7 @@ void Distance::print2(){
     cout << feet_ << "in. is your value in inches " <<  endl;
 }
 void Distance::print3(){
-    cout << feet_ <<"yrds. is your value in yards " << endl;
+    cout << feet_ <<"yrds. is your value in yards " << endl; 
 }
 
 void Distance::print4(){
@@ -110,14 +110,14 @@ int main()
 {
     long double f = 0.0;
     cout << "How many feet do you wish to convert?" << endl;
-    cin >> f;
+    cin >> f;                       //ask user for input
         
     Distance sum;
   
     sum.setfeet(f);
-    sum.getFeet();
+    sum.getFeet();                      //set print after every mutator due to changing value of 'feet_'
     sum.print1();
-    sum.setinch(1,f);
+    sum.setinch(1,f);                   //set input and initial value in parameters
     sum.print2();
     sum.setYards(1,f);
     sum.print3();

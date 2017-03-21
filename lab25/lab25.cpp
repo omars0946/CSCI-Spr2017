@@ -31,7 +31,7 @@ class Bbook                  //declare class
     
 
         void print1(); 
-       
+        
 };
 
 
@@ -43,7 +43,7 @@ Bbook::Bbook()
     string _Copyright;
 }
 
-//initialize the member variables to specific values
+//set constructors
 Bbook::Bbook(string t, string a, string c){
     _Title = t;
     _Author = a;
@@ -54,7 +54,7 @@ void Bbook::setTitle(string t){
         _Title = t;
     }
 
-//conversions equal to _feet
+//equL to inputs
 void Bbook::setAuthor(string a){
         _Author = a;             
     }
@@ -64,12 +64,12 @@ void Bbook::setCopyright(string c){
         _Copyright = c;             
     }
 
-//getters 
+
 string Bbook::getTitle()  {
     return _Title;
 }
 
-string Bbook::getAuthor()  {
+string Bbook::getAuthor()  {            //accessor functions
     return _Author;
 }
 
@@ -80,7 +80,8 @@ string Bbook::getCopyright()  {
 void Bbook::print1(){
     cout << "The title of the book is: "<< _Title <<  endl; 
     cout << "The Author name is: "<< _Author <<  endl;
-    cout << "The Copyright year is: "<< _Copyright <<  endl; //print values seperately
+    cout << "The Copyright year is: "<< _Copyright <<  endl;
+    cout << endl;//print values seperately
 }
 
 
@@ -89,21 +90,67 @@ int main()
     string t;
     string a;
     string c;
+    string t2;
+    string a2;
+    string c2;
+    string t3;
+    string a3;      //declaring all the variables that are goingto be used
+    string c3;
+    string t4;
+    string a4;
+    string c4;
+    string t5;
+    string a5;
+    string c5;
     
-    cout << "Please enter the name of the book" << endl;
+    cout << "Please enter the name of the book, the author, and copyright year" << endl;
     cin >> t;
-    cout << "Please enter the name of the author" << endl;
     cin >> a;
-     cout << "Please enter the copyright year" << endl;
     cin >> c;
+    cout << "Please enter the name of the book, the author, and copyright year" << endl;
+    cin >> t2;
+    cin >> a2;          //asking your inputs to be put in the function
+    cin >> c2;
+     cout << "Please enter the name of the book, the author, and copyright year" << endl;
+    cin >> t3;
+    cin >> a3;
+    cin >> c3;
+     cout << "Please enter the name of the book, the author, and copyright year" << endl;
+    cin >> t4;
+    cin >> a4;
+    cin >> c4;
+     cout << "Please enter the name of the book, the author, and copyright year" << endl;
+    cin >> t5;
+    cin >> a5;
+    cin >> c5;
     
     Bbook total;
   
     total.setTitle(t);
     total.setAuthor(a);
-    total.setCopyright(c);
+    total.setCopyright(c);                      //setting same functions with a different input
     total.print1();
-
+    
+    total.setTitle(t2);
+    total.setAuthor(a2);
+    total.setCopyright(c2);
+    total.print1();
+    
+    total.setTitle(t3);
+    total.setAuthor(a3);
+    total.setCopyright(c3);
+    total.print1();
+    
+    total.setTitle(t4);
+    total.setAuthor(a4);
+    total.setCopyright(c4);
+    total.print1();
+    
+    total.setTitle(t5);
+    total.setAuthor(a5);
+    total.setCopyright(c5);
+    total.print1();
+    
     cout << endl;
 
     return 0;
