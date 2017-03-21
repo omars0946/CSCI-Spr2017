@@ -8,7 +8,7 @@ class Distance                  //declare class
 
     private:
 
-    int _feet;
+    int feet_;
     
     public:
 
@@ -17,10 +17,10 @@ class Distance                  //declare class
         Distance(int f);
 
         //getters - setters
-        void setfeet(long double f);
-        void setinch(long double f);
-        void setYards(long double f);
-        void setMiles(long double f);
+        void setfeet(long double f );
+        void setinch(long double i, long double f);
+        void setYards(long double y, long double f);
+        void setMiles(long double m, long double f);
 
         int getinch() ;
         int getFeet() ;
@@ -37,88 +37,91 @@ class Distance                  //declare class
 //default constructor
 Distance::Distance()
 {
-    _feet = 0;
+    feet_ = 0;
 
 }
 
 //initialize the member variables to specific values
 Distance::Distance( int f){
 
-    _feet = f;
+    feet_ = f;
 
 }
-long double GlobalValue = 0;
+
 //setters
 void Distance::setfeet(long double f){
-    cout << "How many feet do you wish to convert?" << endl;
-    cin >> f;
-        _feet = f;
-        GlobalValue = _feet;
+        feet_ = f;
+        
     }
 
 //conversions equal to _feet
-void Distance::setinch(long double f){
-            f = GlobalValue * 12; 
-            cout << std::setprecision(15) << f;
-        _feet = f;
+void Distance::setinch(long double i, long double f){
+            i = f * 12; 
+            
+        feet_ = i;
     }
 
 
-void Distance::setYards(long double f){
-            f = (GlobalValue/12) * .33333;
-            cout << std::setprecision(15) << f;
+void Distance::setYards(long double y, long double f){
+            y = (f/12) * .33333;
+            
 
-        _feet = f;
+        feet_ = y;
     }
 
-void Distance::setMiles(long double f){
-            f = GlobalValue * 0.000568182;
-            cout << std::setprecision(15) << f;
-        _feet = f;
+void Distance::setMiles(long double m, long double f){
+            m = f * 0.000568182;
+            
+        feet_ = m;
     }
 
 
 //getters 
 int Distance::getinch()  {
-    return _feet;
+    return feet_;
 }
 
 int Distance::getFeet()  {
-    return _feet;
+    return feet_;
 }
 
 int Distance::getYards()  {
-    return _feet;
+    return feet_;
 }
 int Distance::getMiles()  {
-    return _feet;
+    return feet_;
 }
 
 void Distance::print1(){
-    cout << _feet << "ft. Is your value."  <<  endl; //print values seperately
+    cout << feet_ << "ft. Is your value."  <<  endl; //print values seperately
 }
 void Distance::print2(){
-    cout << "in. is your value in inches " <<  endl;
+    cout << feet_ << "in. is your value in inches " <<  endl;
 }
 void Distance::print3(){
-    cout << "yrds. is your value in yards " << endl;
+    cout << feet_ <<"yrds. is your value in yards " << endl;
 }
 
 void Distance::print4(){
-    cout << "mi. is your value in miles " << _feet  << endl;
+    cout << feet_ <<"mi. is your value in miles " << endl;
 }
 
 int main()
 {
+    long double f = 0.0;
+    cout << "How many feet do you wish to convert?" << endl;
+    cin >> f;
+        
     Distance sum;
   
-    sum.setfeet(1);
+    sum.setfeet(f);
+    sum.getFeet();
     sum.print1();
-    sum.setinch(1);
+    sum.setinch(1,f);
     sum.print2();
-    sum.setYards(1);
+    sum.setYards(1,f);
     sum.print3();
-    sum.setMiles(1);
+    sum.setMiles(1,f);
     sum.print4();
 
     cout << endl;
