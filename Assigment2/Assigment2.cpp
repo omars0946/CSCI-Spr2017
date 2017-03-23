@@ -14,18 +14,18 @@ class Distance                  //declare class
 
         //default constructors
         Distance();
-        Distance(int f);
+        Distance(long double f);
 
         //getters - setters
-        void setfeet(long double f );
-        void setinch(long double i, long double f);
-        void setYards(long double y, long double f);
-        void setMiles(long double m, long double f);
+        void setfeet(long double f);
+        void setinch(long double f);
+        void setYards(long double f);
+        void setMiles(long double f);
 
-        int getinch() ;
-        int getFeet() ;
-        int getYards() ;
-        int getMiles() ;
+        double getinch( long double f) ;
+        double getFeet( long double f) ;
+        double getYards( long double f) ;
+        double getMiles( long double f) ;
 
         void print1(); 
         void print2();   
@@ -37,12 +37,11 @@ class Distance                  //declare class
 //default constructor
 Distance::Distance()
 {
-    feet_ = 0;
-
+    feet_ = 0.0;
 }
 
 //initialize the member variables to specific values
-Distance::Distance( int f){
+Distance::Distance( long double f){
 
     feet_ = f;
 
@@ -55,40 +54,42 @@ void Distance::setfeet(long double f){
     }
 
 //conversions equal to _feet
-void Distance::setinch(long double i, long double f){
-            i = f * 12; 
+void Distance::setinch( long double f){
+              
             
-        feet_ = i;
+        feet_ = f ;
     }
 
 
-void Distance::setYards(long double y, long double f){
-            y = (f/12) * .33333;
-            
+void Distance::setYards( long double f){
+        
 
-        feet_ = y;
+        feet_ = f ;
     }
 
-void Distance::setMiles(long double m, long double f){
-            m = f * 0.000568182;
+void Distance::setMiles( long double f){
             
-        feet_ = m;
+        feet_ = f;
     }
 
 
 //getters 
-int Distance::getinch()  {
+double Distance::getinch( long double f)  {
+    feet_ = f * 12;
     return feet_;                       //return private variable
 }
 
-int Distance::getFeet()  {
+double Distance::getFeet( long double f)  {
+    
     return feet_;
 }
 
-int Distance::getYards()  {
+double Distance::getYards( long double f)  {
+    feet_ = f * .33333;
     return feet_;
 }
-int Distance::getMiles()  {
+double Distance::getMiles( long double f)  {
+    feet_ = f * 0.000189394;
     return feet_;
 }
 
@@ -115,13 +116,16 @@ int main()
     Distance sum;
   
     sum.setfeet(f);
-    sum.getFeet();                      //set print after every mutator due to changing value of 'feet_'
+    sum.getFeet(f);                      //set print after every mutator due to changing value of 'feet_'
     sum.print1();
-    sum.setinch(1,f);                   //set input and initial value in parameters
+    
+    sum.setinch(f);                   //set input and initial value in parameters
     sum.print2();
-    sum.setYards(1,f);
+    
+    sum.setYards(f);
     sum.print3();
-    sum.setMiles(1,f);
+    
+    sum.setMiles(f);
     sum.print4();
 
     cout << endl;

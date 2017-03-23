@@ -9,7 +9,7 @@ int product(int x ,int y); // declaring for future use
 void PrintMath() {
     
     int Value1 = 0; // declaration
-    int Value2 = 0
+    int Value2 = 0;
     
     cout << "Pick two numbers" << endl;
     cin >> Value1;
