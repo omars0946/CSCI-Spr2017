@@ -18,19 +18,19 @@ cin >> Guess;
 
 srand (time(NULL));
 
-Generatednumber = rand()%50+1; //random numbe generator
+Generatednumber = rand()%50+1; //random number generator
 
 
 while(Guess != Generatednumber){ //will loop is guess does not equal random number
     
     if(Guess < Generatednumber){ 
-    cout << "Too Low, pick another number" << Generatednumber << endl;
+    cout << "Too Low, pick another number" << endl;
     cin >> Guess;
     1+count++ ;
 }
 
     else if(Guess > Generatednumber){ 
-cout << "Too High, pick another number" <<Generatednumber<< endl;
+cout << "Too High, pick another number" << endl;
 cin >> Guess;
 1+count++ ;
 }
