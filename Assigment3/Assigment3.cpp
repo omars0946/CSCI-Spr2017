@@ -20,34 +20,32 @@ class Game                  //declare class
     int Print_ ;
     public:
         Game();//default constructor
-        Game(int print_);
+        
+        Game(int userInput);
 
         //getters - setters
         void setRock(int userInput,int Generatednumber, int userOutcome, int compOutcome);
         void setPaper(int userInput, int Generatednumber, int userOutcome, int compOutcome);
         void setScissors(int userInput, int Generatednumber, int userOutcome, int compOutcome);
         void setLizard(int userInput, int Generatednumber, int userOutcome, int compOutcome);
-        void setSpock(int userInput, int Generatednumber, int userOutcome, int compOutcome);
+        void setSpock(int userInput, int Generatednumber, int userOutcome, int compOutcome, int show);
 
         double getRock(int show);
         double getPaper(int show);
-        double getScissors(int show);
-        double getLizard(int show);
-        double getSpock(int show);
+       
 
-
-};
+        void display(const char* Output, int Print_);
 //default constructor
 Game::Game()
 {
        Print_ = 0;
-       return;
 }
 
 //initialize the member variables to specific values
 Game::Game(int userInput){
 
-       Print_ = userInput;
+       Print_ =0;
+      
 }
 void Game::setRock(int userInput, int Generatednumber, int userOutcome, int compOutcome)  {
     if (userInput == 1 && Generatednumber== 1){
@@ -147,58 +145,92 @@ void Game::setLizard(int userInput, int Generatednumber, int userOutcome, int co
     };
     return;
 }
-void Game::setSpock(int userInput, int Generatednumber, int userOutcome, int compOutcome)  {
+void Game::setSpock(int userInput, int Generatednumber, int userOutcome, int compOutcome, int show)  {
     if (userInput == 5 && Generatednumber== 1){
-        cout << "Spock vaporizes Rock" << endl;
+        show =1;
         userOutcome++ ;
 }
     else if (userInput == 5 && Generatednumber== 2){
-          cout << "Paper disproves spock" << endl;
+          show =2;
         compOutcome++ ;
     }
     else if (userInput == 5 && Generatednumber== 3){
-        cout << "Spock smashes scissors" << endl;
+        show = 3 ;
         userOutcome++ ;
 }
     else if (userInput == 5 && Generatednumber== 4){
-        cout << "Lizard poisons spock" << endl;
+        show = 4;
         compOutcome++ ;
 }
     else (userInput == 5 && Generatednumber== 5);{
-       cout << "Tie! Retry" << endl;
-         cout << "Rock[1] Paper[2] Scissors[3] Lizard[4] Spock[5]" << endl;
-         cin >> userInput;
-
+       show =  5 ;
+         compOutcome++ ;
     };
     return;
 };
 double Game::getRock(int show){
        Print_ = show;
+    return Print_;
+
     }
 double Game::getPaper(int show){
        Print_ = show;
+     return Print_;
+
     }
 double Game::getScissors(int show){
        Print_ = show;
+              return Print_;
+
     }
 double Game::getLizard(int show){
        Print_ = show;
+              return Print_;
+
     }
 double Game::getSpock(int show){
        Print_ = show;
+       return Print_;
     }
-    
+void display(const char* Output, int Print_ ){
+    if(Print_ ==1){
+    Output ="Sock1" ;
+    cout << Print_ << endl;
+   
+    }
+    else if (Print_ ==2){
+        Output = "Sock2";
+            cout << Print_ << endl;
+
+}
+    else if (Print_ ==3){
+        Output = "Sock3";
+            cout << Print_ << endl;
+      
+}
+    else if (Print_ ==4){
+        Output = "Sock4" ;    
+        cout << Print_ << endl;
+}
+    else(Print_ ==5);{
+        Output ="Sock5";
+        cout << Print_ << endl;
+}
+}    
                     //return private variable
 
 
 int main(){
     
 int Generatednumber = 0;
-int userOutcome;
-int compOutcome;
-int numGames;
+int userOutcome = 0;
+int compOutcome = 0;
+int numGames =0;
 int userInput = 0;
-int show;
+const char* Output = 0  ;
+int Print_ = 0;
+int show = 0;
+
     cout << "You are about to play the game: Rock Paper Scissors Lizard Spock Game" << endl;
     cout << "The game is an expanison of the game rock papaer scissors, Pick between the options given and play against the computer" << endl;
     cout << "The way this works is: Scissors cuts Paper,  Paper covers Rock, Rock crushes Lizard,  Lizard poisons Spock, Spock smashes Scissors" << endl;
@@ -213,21 +245,30 @@ int show;
             cout << "Rock[1] Paper[2] Scissors[3] Lizard[4] Spock[5]" << endl;
             cin >> userInput;
             
+            Game sum;
         switch(userInput){
             case 1:
-                void setRock(int userInput, int Generatednumber, int userOutcome, int compOutcome);
+                sum.setRock( userInput,  Generatednumber,  userOutcome,  compOutcome);
                break; 
             case 2:
-                void setPaper(int userInput, int Generatednumber, int userOutcome, int compOutcome);
+                sum.setPaper( userInput,  Generatednumber,  userOutcome,  compOutcome);
                break; 
             case 3:
-                void setScissors(int userInput, int Generatednumber, int userOutcome, int compOutcome);
+                sum.setScissors( userInput,  Generatednumber,  userOutcome,  compOutcome);
                break; 
             case 4:
-                void setLizard(int userInput, int Generatednumber, int userOutcome, int compOutcome);
+                sum.setLizard( userInput,  Generatednumber,  userOutcome,  compOutcome);
                break; 
             case 5:
-                 void setSpock(int userInput, int Generatednumber, int userOutcome, int compOutcome);
+            int Print_ = 0;
+                 sum.setSpock( userInput,  Generatednumber,  userOutcome,  compOutcome,  show);
+                 sum.getSpock( show);
+                 sum.display(Output, Print_ );
+                  cout << "Generated number" << Generatednumber<<  endl;
+                  cout << "userOutcome number" << userOutcome<<  endl;
+                  cout << "compOutcome number" << compOutcome<<  endl;
+                  cout << "show number" << show<<  endl;
+                 cout << Print_ << endl;
                break; 
                        
                 srand (time(NULL));
@@ -240,6 +281,11 @@ int show;
         cout << "score: comp = " << compOutcome << endl;
         cout << "score: user = " << userOutcome << endl;
 
+    }
+    else if(userOutcome == compOutcome){
+        cout << "Failed" << endl;
+        cout << "score: comp = " << compOutcome << endl;
+        cout << "score: user = " << userOutcome << endl;
     }
     else(userOutcome > compOutcome);{
         cout << "You won!" << endl;
