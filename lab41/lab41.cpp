@@ -80,6 +80,7 @@ void Is_sorted(int i, int SIZE){
     if (myArray[1] >= myArray[i]) {
         cout << "No."<<endl;
         i++ ;
+    }
         else if  (myArray[1] >= myArray[i]) {
         cout << "No."<<endl;
         i++ ; }
